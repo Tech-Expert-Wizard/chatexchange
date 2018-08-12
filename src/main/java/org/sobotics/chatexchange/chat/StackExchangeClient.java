@@ -250,6 +250,24 @@ public class StackExchangeClient implements AutoCloseable {
 	public void setAutoCreateAccount(boolean autoCreateAccount) {
 		this.autoCreateAccount = autoCreateAccount;
 	}
+	
+	
+	/**
+	 * Returns the cookies for the first room with the given host
+	 * @param host {@link ChatHost} to search for
+	 * @return null, if no room with the given {@link ChatHost} was found
+	 */
+	public Map<String, String> getCookies(ChatHost host) {
+		for (Room room : this.rooms) {
+			ChatHost roomHost = room.getHost();
+			
+			if (host.equals(roomHost)) {
+				return room.getCookies();
+			}
+		}
+		
+		return null;
+	}
 
 	/**
 	 * Closes this client by making the logged-in user leave all the chat rooms they joined.

@@ -618,6 +618,14 @@ public final class Room {
 	public ChatHost getHost() {
 		return host;
 	}
+	
+	/**
+	 * Returns the cookies used to post in this room
+	 * @return cookies as Map
+	 */
+	public Map<String, String> getCookies() {
+		return this.cookies;
+	}
 
 	void close() {
 		executor.shutdown();

@@ -21,5 +21,13 @@ deploy:
     skip_cleanup: true
     on:
       repo: SOBotics/chatexchange
+      branch: develop
+      jdk: oraclejdk8
+  -
+    provider: script
+    script: .travis/deploy.sh
+    skip_cleanup: true
+    on:
+      repo: SOBotics/chatexchange
       tags: true
       jdk: oraclejdk8
