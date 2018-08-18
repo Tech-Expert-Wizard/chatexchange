@@ -51,9 +51,9 @@ public enum ChatHost {
 	 */
 	public String getLoginHost() {
 		return this.loginHost;
-  }
+    }
   
-  
+    /**
 	 * Compares the host to another object
 	 * @param otherHost other object
 	 * @return true, if the name is the same
