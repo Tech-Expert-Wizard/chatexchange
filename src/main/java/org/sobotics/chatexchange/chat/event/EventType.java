@@ -46,7 +46,7 @@ public final class EventType<T> {
 	 * message containing <code>@foo</code>, this event will not be raised.
 	 */
 	public static final EventType<UserMentionedEvent> USER_MENTIONED = new EventType<>(UserMentionedEvent.class);
-
+	public static final EventType<PingMessageEvent> PING_MESSAGE = new EventType<>(PingMessageEvent.class);
 	/**
 	 * Event raised when a user is entering the chat room. This event is only raised when the user wasn't previously in the room,
 	 * meaning that they previously left it or never entered.
